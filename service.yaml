@@ -5,8 +5,10 @@ metadata:
   namespace: jenkins
 spec:
   selector:
-    app.kubernetes.io/name: MyApp
+    app: httpd
+  type: Nordport
   ports:
     - protocol: TCP
       port: 80
       targetPort: 9376
+      nodeport: 3000
