@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins-kuberenetes
-  namespace: jenkins
   labels:
     app: httpd
 spec:
@@ -17,6 +16,6 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: 
+        image: docker.io/nirbhaisingh/jenkins:latest
         ports:
         - containerPort: 80
