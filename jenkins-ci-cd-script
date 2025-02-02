@@ -1,2 +1,11 @@
 For getting ssh jenkins to master
 sudo ssh -o StrictHostKeyChecking=no -i passwd.pem root@13.201.26.32 
+
+
+sudo docker build -t docker.io/nirbhaisingh/jenkins .
+sudo docker login -u nirbhaisingh -p $dockerpassword
+sudo docker push docker.io/nirbhaisingh/jenkins
+sudo docker rmi docker.io/nirbhaisingh/jenkins
+sudo ssh -o StrictHostKeyChecking=no -i passwd.pem root@<>  git clone https://github.com/singhnirbhai/docker-jenkins.git /root/jenkins
+sudo ssh -o StrictHostKeyChecking=no -i passwd.pem root@<>  kubectl create -f /root/jenkins/service.yaml -n jenkins  
+sudo ssh -o StrictHostKeyChecking=no -i passwd.pem root@<>  kubectl create -f /root/jenkins/Deployment.yaml -n jenkins  
