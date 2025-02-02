@@ -1,1 +1,2 @@
-
+For getting ssh jenkins to master
+sudo ssh -o StrictHostKeyChecking=no -i passwd.pem root@13.201.26.32 
