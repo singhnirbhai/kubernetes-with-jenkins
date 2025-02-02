@@ -1,11 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Docker Website</title>
+    <title>Kubernetes Project</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://picsum.photos/1600/900') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        .card h1 {
+            color: #333;
+            margin-top: 0;
+            font-size: 10vw; /* Responsive font size based on viewport width */
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 5vw; /* Responsive font size based on viewport width */
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        /* Media queries for finer control on different screen sizes */
+        @media (min-width: 600px) {
+            .card h1 {
+                font-size: 60px; /* Fixed size for larger screens */
+            }
+
+            .card p {
+                font-size: 30px; /* Fixed size for larger screens */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .card h1 {
+                font-size: 80px; /* Larger size for very large screens */
+            }
+
+            .card p {
+                font-size: 40px; /* Larger size for very large screens */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from kubernetes!</h1>
-    <h1>Congratulations we are completed our kubernetes project with jenkins!</h1></body>
+    <div class="container">
+        <div class="card">
+            <h1>Hello Dost!</h1>
+            <p>Kubernetes Project Done</p>
+        </div>
+    </div>
+</body>
 </html>
